@@ -1,0 +1,85 @@
+/* Navbar container */
+.navParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  color: #fff;
+  background: linear-gradient(
+    60deg,
+    rgba(122, 179, 166, 1) 0%,
+    rgba(18, 82, 67, 1) 100%
+  );
+  position: relative;
+}
+
+/* Logo styling */
+.navLogo p {
+  margin: 0;
+  font-size: 30px;
+  color: #fbffe4;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+/* Links section */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Individual link styles */
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 9px;
+}
+
+.navLinks a:hover {
+  color: #000;
+  background-color: #fbffe4;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hamburger icon */
+.navHamBurger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 700px) {
+  .navHamBurger {
+    display: block;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background: #125243;
+    width: 100%;
+    padding: 0 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    /* Transition properties */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+
+  .navLinks.open {
+    max-height: 300px; /* Set a value large enough to contain the menu */
+    opacity: 1;
+    padding: 20px; /* Restore padding when open */
+  }
+}

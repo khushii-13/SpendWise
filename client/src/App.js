@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Regiser from "./pages/Register";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route } from "react-router-dom";
+import "./styles/app.css";
 
 function App() {
   return (

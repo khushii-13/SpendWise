@@ -1,6 +1,6 @@
 # navbar 
 
-# register 
+# register(F & B)
 
 # login 
 
